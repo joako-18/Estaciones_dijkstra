@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Estaciones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-row">
+        <div class="container">
+            <h1>Estaciones de Tren</h1>
+            <form id="addVertexForm">
+                <label for="vertexName">Agregar Estacion:</label>
+                <input type="text" id="vertexName" placeholder="Nombre de la ciudad" required>
+                <button type="submit">Agregar</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <form id="addEdgeForm">
+                <label for="startVertex">Estacion de Inicio:</label>
+                <input type="text" id="startVertex" placeholder="Ciudad inicial" required>
+                <label for="endVertex">Estacion de Destino:</label>
+                <input type="text" id="endVertex" placeholder="Ciudad destino" required>
+                <label for="weight">Distancia:</label>
+                <input type="number" id="weight" placeholder="Distancia en km" required>
+                <button type="submit">Agregar Ruta</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <button id="dfsBtn">Todas las Estaciones</button>
+        <div id="resultContainer"></div>
+    </div>
+
+    <div class="container">
+        <h1>Calcular Distancia Mínima</h1>
+        <form id="shortestPathForm">
+            <label for="startVertexSP">Estación de Inicio:</label>
+            <input type="text" id="startVertexSP" placeholder="Ciudad inicial" required>
+            <label for="endVertexSP">Estación de Destino:</label>
+            <input type="text" id="endVertexSP" placeholder="Ciudad destino" required>
+            <button type="submit">Calcular Distancia</button>
+        </form>
+        <div id="shortestPathResult"></div>
+    </div>
+
+    <script type="module" src="/src/controllers/Script.mjs"></script>
+</body>
+</html>
